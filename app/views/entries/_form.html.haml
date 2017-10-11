@@ -1,0 +1,11 @@
+= simple_form_for(@entry) do |f|
+  = f.error_notification
+
+  .form-inputs
+    -# = f.input :status, as: :select, collection: [['Entrada', 'entry'], ['Ajuste', 'adjustment']]
+    = f.association :product
+    = f.input :quantity
+    = f.input :value_unit
+
+  .form-actions
+    = f.button :submit

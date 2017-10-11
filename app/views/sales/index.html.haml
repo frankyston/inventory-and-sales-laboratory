@@ -1,0 +1,22 @@
+%h1 Listing sales
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Value total
+      %th Customer
+      %th Actions
+
+  %tbody
+    - @sales.each do |sale|
+      %tr
+        %td= sale.value_total
+        %td= sale.customer.name
+        %td
+          = link_to 'Show', sale
+          = link_to 'Edit', edit_sale_path(sale)
+          = link_to 'Destroy', sale, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Sale', new_sale_path

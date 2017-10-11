@@ -1,0 +1,14 @@
+= simple_form_for(@sale) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :customer
+
+    #sale_items
+      = f.simple_fields_for :sale_items do |sale_item|
+        = render 'sale_item_fields', f: sale_item
+      .links
+        = link_to_add_association 'add item', f, :sale_items
+
+  .form-actions
+    = f.button :submit

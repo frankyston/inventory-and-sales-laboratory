@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  value_total: 9.99
+  customer: one
+  is_client: false
+
+two:
+  value_total: 9.99
+  customer: two
+  is_client: false

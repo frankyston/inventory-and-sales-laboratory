@@ -1,0 +1,17 @@
+%p#notice= notice
+
+%p
+  %b Quantity:
+  = @entry.quantity
+%p
+  %b Value unit:
+  = @entry.value_unit
+%p
+  %b Value total:
+  = @entry.value_total
+%p
+  %b Product:
+  = @entry.product
+
+-# = link_to 'Edit', edit_entry_path(@entry)
+= link_to 'Back', entries_path

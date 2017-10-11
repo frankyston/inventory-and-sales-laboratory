@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Value total:
+  = @sale.value_total
+%p
+  %b Customer:
+  = @sale.customer
+
+= link_to 'Edit', edit_sale_path(@sale)
+\|
+= link_to 'Back', sales_path
